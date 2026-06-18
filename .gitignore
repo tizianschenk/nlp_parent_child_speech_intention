@@ -216,3 +216,139 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# ==========================================
+# 1. OS & System Files (Keep repo clean)
+# ==========================================
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
+.pytest_cache/
+
+# ==========================================
+# 2. Virtual Environments & Packages
+# ==========================================
+venv/
+.venv/
+env/
+.env/
+bin/
+lib/
+include/
+share/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+*.egg-info/
+
+# ==========================================
+# 3. Credentials & Sensitive Data (CRITICAL)
+# ==========================================
+.env
+*.env
+.env.*
+.secrets
+credentials.json
+client_secret*.json
+*.pem
+*.key
+*.token
+*config.ini
+
+# ==========================================
+# 4. Large Datasets & Raw Inputs
+# ==========================================
+data/
+datasets/
+*.csv
+*.xlsx
+*.jsonl
+*.parquet
+*.tsv
+*.zip
+*.tar.gz
+*.tgz
+
+# ==========================================
+# 5. Training Artifacts & Logs
+# ==========================================
+runs/
+logs/
+.chunks/
+scheduler.pt
+rng_state.pth
+training_args.bin
+
+# ==========================================
+# 6. Specific SetFit Training Folders
+# ==========================================
+# Ignore the training directories globally to drop heavy files like optimizer.pt
+results_*/
+models/
+
+# ==========================================
+# 7. Explicit Force-Include for Model Loading
+# ==========================================
+# Re-include ONLY the necessary metadata, tokenizers, and weights for your loading script
+
+!results_1/checkpoint-*/config.json
+!results_1/checkpoint-*/model.safetensors
+!results_1/checkpoint-*/sentence_bert_config.json
+!results_1/checkpoint-*/config_setfit.json
+!results_1/checkpoint-*/tokenizer*
+
+!results_10/checkpoint-*/config.json
+!results_10/checkpoint-*/model.safetensors
+!results_10/checkpoint-*/sentence_bert_config.json
+!results_10/checkpoint-*/config_setfit.json
+!results_10/checkpoint-*/tokenizer*
+
+!results_25/checkpoint-*/config.json
+!results_25/checkpoint-*/model.safetensors
+!results_25/checkpoint-*/sentence_bert_config.json
+!results_25/checkpoint-*/config_setfit.json
+!results_25/checkpoint-*/tokenizer*
+
+!results_50/checkpoint-*/config.json
+!results_50/checkpoint-*/model.safetensors
+!results_50/checkpoint-*/sentence_bert_config.json
+!results_50/checkpoint-*/config_setfit.json
+!results_50/checkpoint-*/tokenizer*
+
+!results_75/checkpoint-*/config.json
+!results_75/checkpoint-*/model.safetensors
+!results_75/checkpoint-*/sentence_bert_config.json
+!results_75/checkpoint-*/config_setfit.json
+!results_75/checkpoint-*/tokenizer*
+
+!results_100/checkpoint-*/config.json
+!results_100/checkpoint-*/model.safetensors
+!results_100/checkpoint-*/sentence_bert_config.json
+!results_100/checkpoint-*/config_setfit.json
+!results_100/checkpoint-*/tokenizer*
+
+!results_final/checkpoint-*/config.json
+!results_final/checkpoint-*/model.safetensors
+!results_final/checkpoint-*/sentence_bert_config.json
+!results_final/checkpoint-*/config_setfit.json
+!results_final/checkpoint-*/tokenizer*
+
+!models/setfit_model_final/config.json
+!models/setfit_model_final/model.safetensors
+!models/setfit_model_final/sentence_bert_config.json
+!models/setfit_model_final/config_setfit.json
+!models/setfit_model_final/tokenizer*
+
+# Ignore the training and model directories completely for now
+results_*/
+models/
+**/optimizer.pt
